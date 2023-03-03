@@ -24,9 +24,11 @@ public class Player_Controller : MonoBehaviour
 	public float maxRotation = 60;
 	float h_mouse, v_mouse;
 
-	[Header("Hands Settings")]
-	public Transform righ_Hand;
-	public Transform left_Hand;
+	[Header("Hands Ref")]
+	public Hands_Grab left_Hand;
+	public Hands_Grab right_Hand;
+	
+	
 	void Start()
 	{
 		characterController = GetComponent<CharacterController>();
@@ -64,12 +66,27 @@ public class Player_Controller : MonoBehaviour
 
 		characterController.Move(movement * Time.deltaTime);
 
+		if (Input.GetButtonDown("Fire1"))
+		{
+			left_Hand.Grab_Object(cam_pos);
+		}	
+		if (Input.GetButtonDown("Fire2"))
+		{
+			right_Hand.Grab_Object(cam_pos);
+		}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+			left_Hand.Throw();
+        } 
+		if (Input.GetKeyDown(KeyCode.E))
+        {
+			right_Hand.Throw();
+        }
 
-
-		if (Input.GetKey(KeyCode.E))
+		/*if (Input.GetKey(KeyCode.E))
 		{
 			Interaction();
-		}
+		}*/
 	}
 
 	private void Interaction()
@@ -82,10 +99,5 @@ public class Player_Controller : MonoBehaviour
 		}
 
 	}
-	private void get_ToHand(GameObject object_ToGrab)
-    {
-		object_ToGrab.transform.SetParent(cam_pos);
-		object_ToGrab.transform.position = Vector3.Lerp(object_ToGrab.transform.position, righ_Hand.position, Time.deltaTime);
-		object_ToGrab.transform.rotation = Quaternion.Lerp(object_ToGrab.transform.rotation, righ_Hand.rotation, Time.deltaTime);
-    }
+	
 }
