@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Puzzle
-=======
-  - Grabable
->>>>>>> fb43c13336dac1b59dbd64679874f8d0ab15fdae
+  tags: []
   layers:
   - Default
   - TransparentFX
