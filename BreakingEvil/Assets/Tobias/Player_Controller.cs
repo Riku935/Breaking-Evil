@@ -66,15 +66,31 @@ public class Player_Controller : MonoBehaviour
 
 		characterController.Move(movement * Time.deltaTime);
 
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1")& !left_Hand.isGrab)
 		{
 			left_Hand.Grab_Object(cam_pos);
-		}	
-		if (Input.GetButtonDown("Fire2"))
+        }
+        else if (Input.GetButtonDown("Fire1") & left_Hand.isGrab)
+		{
+			left_Hand.Interaction();
+		}
+		if (Input.GetButtonDown("Fire2")&!right_Hand.isGrab)
 		{
 			right_Hand.Grab_Object(cam_pos);
 		}
-        if (Input.GetKeyDown(KeyCode.Q))
+		else if (Input.GetButtonDown("Fire2") & right_Hand.isGrab)
+		{
+			right_Hand.Interaction();
+		}
+
+
+
+
+
+
+
+
+		if (Input.GetKeyDown(KeyCode.Q))
         {
 			left_Hand.Throw();
         } 
@@ -94,7 +110,7 @@ public class Player_Controller : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(cam_pos.position, cam_pos.forward, out hit, interactDistance, LayerMask.GetMask("Grabable")))
 		{
-       hit.transform.GetComponent<Grabable>();//manda a llamar el override de los codigos 
+       hit.transform.GetComponent<Object_Interaction>().Use();//manda a llamar el override de los codigos 
           
 		}
 
