@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grabable : MonoBehaviour
+public class Object_Interaction : MonoBehaviour
 {
-    public virtual void Grab()
+    public virtual void Use()
     {
 
     }
