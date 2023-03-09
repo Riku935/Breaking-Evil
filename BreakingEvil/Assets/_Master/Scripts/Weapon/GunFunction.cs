@@ -51,7 +51,14 @@ public class GunFunction : Object_Interaction
     }
     void Fire()
     {
-        var bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        print("hooa");
+        //var bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        GameObject bullet = BulletPooler.instance.GetPooledObject();
+        if (bullet != null)
+        {
+            bullet.transform.position = bulletSpawnPoint.position;
+            bullet.SetActive(true);
+        }
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
     }
     void Recoil()
