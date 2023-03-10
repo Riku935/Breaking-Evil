@@ -7,7 +7,6 @@ TagManager:
   - Grabable
   - Gun
   - Bullet
-  - Zombie
   layers:
   - Default
   - TransparentFX
