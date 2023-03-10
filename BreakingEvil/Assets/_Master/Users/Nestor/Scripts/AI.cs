@@ -12,7 +12,7 @@ public class AI : MonoBehaviour
 
     [Header("FollowPlayer----------------------")]
     
-    public bool followPlayer;
+    public bool followPlayer, isMoving = true;
     private GameObject player;
     [SerializeField] private float distanceToPlayer;
     [SerializeField] private float distanceToFollowPlayer=3f;
@@ -28,14 +28,15 @@ public class AI : MonoBehaviour
     void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if(distanceToPlayer <= distanceToFollowPlayer && followPlayer)
+        if(distanceToPlayer <= distanceToFollowPlayer && followPlayer && isMoving)
         {
             FollowPlayer();
         }
-        else
+        else if(isMoving)
         {
             EnemyPath();
         }
+
     }
     public void EnemyPath()
     {
@@ -55,5 +56,9 @@ public class AI : MonoBehaviour
     public void FollowPlayer()
     {
         navMeshAgent.destination = player.transform.position;
+    }
+    public void StopEnemyPath()
+    {
+        isMoving = false;
     }
 }
