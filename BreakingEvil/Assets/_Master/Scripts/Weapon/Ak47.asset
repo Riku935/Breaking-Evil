@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39e70714867b98b4792092ab5a21c7a0, type: 3}
-  m_Name: M1911
+  m_Name: Ak47
   m_EditorClassIdentifier: 
-  gunName: Pistol
-  damage: 30
-  maxDistance: 200
-  currentAmmo: 20
-  chargerSize: 20
-  currentCharger: 13
-  reservedAmmo: 60
-  currentReserved: 60
-  fireRate: 1
-  reloadTime: 3
+  gunName: AK47
+  damage: 20
+  maxDistance: 20
+  currentAmmo: 60
+  chargerSize: 60
+  currentCharger: 60
+  reservedAmmo: 200
+  currentReserved: 200
+  fireRate: 0.1
+  reloadTime: 2
   reloading: 0
   canShoot: 1
