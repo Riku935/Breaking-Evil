@@ -66,7 +66,7 @@ public class Player_Controller : MonoBehaviour
 
 		characterController.Move(movement * Time.deltaTime);
 
-		if (Input.GetButton("Fire1")& !left_Hand.isGrab)
+		if (Input.GetButtonDown("Fire1")& !left_Hand.isGrab)
 		{
 			left_Hand.Grab_Object(cam_pos);
         }
@@ -74,7 +74,7 @@ public class Player_Controller : MonoBehaviour
 		{
 			left_Hand.Interaction();
 		}
-		if (Input.GetButton("Fire2")&!right_Hand.isGrab)
+		if (Input.GetButtonDown("Fire2")&!right_Hand.isGrab)
 		{
 			right_Hand.Grab_Object(cam_pos);
 		}
