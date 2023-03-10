@@ -51,7 +51,6 @@ public class GunFunction : Object_Interaction
     }
     void Fire()
     {
-        print("hooa");
         //var bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         GameObject bullet = BulletPooler.instance.GetPooledObject();
         if (bullet != null)
