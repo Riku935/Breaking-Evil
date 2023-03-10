@@ -18,7 +18,7 @@ public class Hands_Grab : MonoBehaviour
         if (Physics.BoxCast(transform.position, transform.localScale, transform.forward, out hit, transform.rotation, interactDistance, LayerMask.GetMask("Grabable")) & !isGrab)
         {
 
-            Grab(hit, toParent);
+            Grab(hit);
             isGrab = true;
         }
 
@@ -38,11 +38,11 @@ public class Hands_Grab : MonoBehaviour
             isGrab = false;
         }
     }
-    public void Grab(RaycastHit raycastHit, Transform parent)
+    public void Grab(RaycastHit raycastHit)
     {
         object_ToGrab = raycastHit.transform.GetComponent<Transform>();
         object_Rb = raycastHit.transform.GetComponent<Rigidbody>();
-        object_ToGrab.transform.SetParent(parent);
+        object_ToGrab.transform.SetParent(this.transform);
         object_ToGrab.transform.position = Vector3.Lerp(object_ToGrab.transform.position, transform.position, 10);
         object_ToGrab.transform.rotation = Quaternion.Lerp(object_ToGrab.transform.rotation, transform.rotation, 10);
         object_Rb.constraints = RigidbodyConstraints.FreezeAll;
