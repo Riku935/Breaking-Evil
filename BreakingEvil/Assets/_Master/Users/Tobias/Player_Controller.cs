@@ -70,18 +70,19 @@ public class Player_Controller : MonoBehaviour
 		{
 			left_Hand.Grab_Object(cam_pos);
         }
-        else if (Input.GetButton("Fire1") & left_Hand.isGrab)
+        else if (Input.GetButtonUp("Fire1") & left_Hand.isGrab)
 		{
-			left_Hand.Interaction();
+            left_Hand.Throw();
+           
 		}
 		if (Input.GetButtonDown("Fire2")&!right_Hand.isGrab)
 		{
 			right_Hand.Grab_Object(cam_pos);
 		}
-		else if (Input.GetButton("Fire2") & right_Hand.isGrab)
+		else if (Input.GetButtonUp("Fire2") & right_Hand.isGrab)
 		{
-			right_Hand.Interaction();
-		}
+            right_Hand.Throw();
+        }
 
 
 
@@ -92,11 +93,12 @@ public class Player_Controller : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Q))
         {
-			left_Hand.Throw();
+            left_Hand.Interaction();
         } 
 		if (Input.GetKeyDown(KeyCode.E))
         {
-			right_Hand.Throw();
+            right_Hand.Interaction();
+           
         }
 
 		/*if (Input.GetKey(KeyCode.E))
