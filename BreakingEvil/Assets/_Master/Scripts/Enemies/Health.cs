@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour
+public class Health : MonoBehaviour
 {
   public  UnityEvent onDeath;
-  
-
-   public float _enemyHealth;
+  public float maxHealth;
     private void Update()
     {
-        onEnemyDeath();
+        Death();
     }
-    public void onEnemyDeath()
+    public void Death()
     {
-        if (_enemyHealth<=0) {onDeath.Invoke();}       
+        if (maxHealth<=0) {onDeath.Invoke();}       
     }
 }
