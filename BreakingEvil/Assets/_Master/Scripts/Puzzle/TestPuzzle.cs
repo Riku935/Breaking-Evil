@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class TestPuzzle : MonoBehaviour
 {
+    public delegate void HandlerPuzzle(GameObject sender);
+    public event HandlerPuzzle OnPuzzleComplete;
+    public event HandlerPuzzle OnPuzzleFail;
+
     public GameObject puzzleObject;
     public Transform puzzlePosition;
+    public Transform movePosition;
 
     public float speed = 1f;
     public bool coroutineRunning = true;
@@ -22,7 +27,12 @@ public class TestPuzzle : MonoBehaviour
             other.gameObject.SetActive(false);
             
             StartCoroutine(PuttingPuzzle());
+            PuzzleComplete();
         }
+    }
+    void PuzzleComplete()
+    {
+        if(OnPuzzleComplete != null){OnPuzzleComplete (gameObject); }
     }
     IEnumerator PuttingPuzzle()
     {
@@ -32,7 +42,7 @@ public class TestPuzzle : MonoBehaviour
         yield return new WaitForSeconds(2f);
         while (coroutineRunning)
         {
-            instance.transform.position = Vector3.MoveTowards(puzzlePosition.position, transform.position, speed * Time.deltaTime);
+            instance.transform.position = Vector3.MoveTowards(movePosition.position, transform.position, speed * Time.deltaTime);
             
             if (instance.transform.position == transform.position)
             {
