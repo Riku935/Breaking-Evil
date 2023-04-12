@@ -15,7 +15,7 @@ public class Hands_Grab : MonoBehaviour
         RaycastHit hit;
         //Physics.BoxCast(transform.position, transform.localScale, transform.forward, out hit, transform.rotation, interactDistance);
         //if (Physics.Raycast(transform.position, transform.forward, out hit, interactDistance, LayerMask.GetMask("Grabable"))&!isGrab)
-        if (Physics.BoxCast(transform.position, transform.localScale, transform.forward, out hit, transform.rotation, interactDistance, LayerMask.GetMask("Grabable")) & !isGrab)
+        if (Physics.BoxCast(transform.position, transform.localScale*2, transform.forward, out hit, transform.rotation, interactDistance, LayerMask.GetMask("Grabable")) & !isGrab)
         {
 
             Grab(hit);
@@ -24,17 +24,18 @@ public class Hands_Grab : MonoBehaviour
 
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(new Vector3(transform.position.x,transform.position.y,transform.position.z+interactDistance/8) , new Vector3(0.2f, 0.2f, transform.localScale.x * interactDistance));
-    }*/
+    }
     public void Throw()
     {
         if (isGrab)
         {
             object_ToGrab.transform.parent = null;
             object_Rb.constraints = RigidbodyConstraints.None;
+            object_Rb.velocity = Vector3.zero;
             isGrab = false;
         }
     }
