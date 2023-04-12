@@ -8,18 +8,23 @@ public class EventManager : MonoBehaviour
 {
     //[SerializeField] private UnityEvent puzzle;
 
+    public static EventManager obj;
     public float rotationSpeed = 10f;
-    private void Start()
+    public bool canOpen = false;
+    public int puzzleCount;
+    private void Awake()
     {
-        TestPuzzle temp = new TestPuzzle();
-        temp.OnPuzzleComplete += HandleOnPuzzleComplete;
-    }
-    void HandleOnPuzzleComplete(GameObject sender)
-    {
-        print(sender.name);
+        obj = this;
     }
     private void Update()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        if (puzzleCount == 3)
+        {
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        }
+    }
+    private void OnDestroy()
+    {
+        obj = null;
     }
 }

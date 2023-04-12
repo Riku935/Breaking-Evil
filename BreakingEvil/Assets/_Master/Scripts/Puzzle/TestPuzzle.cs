@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class TestPuzzle : MonoBehaviour
 {
-    public delegate void HandlerPuzzle(GameObject sender);
-    public event HandlerPuzzle OnPuzzleComplete;
-    public event HandlerPuzzle OnPuzzleFail;
-
     public GameObject puzzleObject;
     public Transform puzzlePosition;
     public Transform movePosition;
@@ -16,23 +12,20 @@ public class TestPuzzle : MonoBehaviour
     public bool coroutineRunning = true;
 
     private GameObject instance;
+
+    public string keyName;
     private void Start()
     {
         
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "PuzzleObject")
+        if (other.gameObject.name == keyName)
         {
             other.gameObject.SetActive(false);
-            
+            EventManager.obj.puzzleCount++;
             StartCoroutine(PuttingPuzzle());
-            PuzzleComplete();
         }
-    }
-    void PuzzleComplete()
-    {
-        if(OnPuzzleComplete != null){OnPuzzleComplete (gameObject); }
     }
     IEnumerator PuttingPuzzle()
     {
