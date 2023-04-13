@@ -11,7 +11,7 @@ public class GunFunction : Object_Interaction
     public GameObject bulletPrefab;
     public float bulletSpeed;
     private GameObject playerRecoil;
-
+    [SerializeField] ParticleSystem _fireEffect;
     void Start()
     {
         _gunData.currentCharger = _gunData.chargerSize;
@@ -60,13 +60,13 @@ public class GunFunction : Object_Interaction
         }
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
     }
-    void Recoil()
+    void Effect()
     {
-        //transform.position -= Vector3.forward * 0.1f;
+        _fireEffect.Play();
     }
     IEnumerator ShootGun()
     {
-        Recoil();
+        Effect();
         Fire();
         yield return new WaitForSeconds(_gunData.fireRate);
         _gunData.canShoot = true;

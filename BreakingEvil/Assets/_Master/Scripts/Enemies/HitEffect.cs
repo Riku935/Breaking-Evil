@@ -6,6 +6,7 @@ public class HitEffect : MonoBehaviour
 {
     private ParticleSystem _hitEffects;
     [SerializeField] private string _hitTag="Bullet";
+    [SerializeField] private string _axeTag="Axe";
     [SerializeField] private string _effectTag;
 
     private void Start()
@@ -21,7 +22,13 @@ public class HitEffect : MonoBehaviour
             PlayEffect();
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(_axeTag))
+        {
+            PlayEffect();
+        }
+    }
 
     private void PlayEffect()
     { 
