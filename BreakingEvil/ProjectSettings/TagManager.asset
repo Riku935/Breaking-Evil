@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - interactable
   - BloodSplash
+  - Axe
   layers:
   - Default
   - TransparentFX
