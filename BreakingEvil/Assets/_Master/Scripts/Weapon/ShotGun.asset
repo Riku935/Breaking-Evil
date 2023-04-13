@@ -17,9 +17,9 @@ MonoBehaviour:
   maxDistance: 100
   currentAmmo: 8
   chargerSize: 8
-  currentCharger: 0
+  currentCharger: 8
   reservedAmmo: 20
-  currentReserved: 12
+  currentReserved: 20
   fireRate: 0.3
   reloadTime: 1
   reloading: 0
