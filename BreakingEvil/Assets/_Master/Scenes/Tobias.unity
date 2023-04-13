@@ -303,26 +303,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 603582718}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &123422936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7191556997575159601, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &123422940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123422936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!1 &162624208
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 578376449398627443, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.63757956
+      value: 2.297
       objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
@@ -482,50 +462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 644941570961339400, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
-    - target: {fileID: 1634258723837532857, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
-    - target: {fileID: 2135214745534004920, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
-    - target: {fileID: 3219822767693964850, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
     - target: {fileID: 4493914613880827488, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
       propertyPath: m_Name
       value: Zombie1 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7188414664986407102, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
-    - target: {fileID: 7389507112651452681, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853688073524610632, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _enemyHealth
-      value: 
-      objectReference: {fileID: 621887336}
-    - target: {fileID: 8308641497441176128, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: maxHealth
-      value: 130
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6178191508cdc48439f46177c9649619, type: 3}
@@ -962,39 +902,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &482776449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5309842396207419971, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &482776453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482776449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: Bullet
---- !u!114 &482776454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482776449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!1 &529826364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,18 +6055,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b9679c22cafe344aa30a460de790c8d, type: 3}
---- !u!114 &621887336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8308641497441176128, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cbf0dc2a6841fd4abe59406abd17015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &666999982
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,26 +6356,6 @@ Transform:
   m_Father: {fileID: 929225833}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &859524505 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 308549296256803891, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &859524509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859524505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!1 &874432282
 GameObject:
   m_ObjectHideFlags: 0
@@ -6615,39 +6490,6 @@ Transform:
   m_Father: {fileID: 531484244}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &966075918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6941011484834718258, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &966075922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966075918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: Bullet
---- !u!114 &966075923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966075918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!1001 &1206912990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7446,39 +7288,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1769606233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4812983789445039901, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1769606237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769606233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tag: Bullet
---- !u!114 &1769606238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769606233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!4 &1778533340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4059277943454222, guid: 8bd7215dd6c525f478292cbc530ac5e8,
@@ -7644,26 +7453,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ea1ca0d27319ea4ead9840095916f24, type: 3}
---- !u!1 &1884845594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8350842607155682487, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 164662155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1884845598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884845594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitTag: Bullet
-  _effectTag: BloodSplash
 --- !u!1001 &1892097556
 PrefabInstance:
   m_ObjectHideFlags: 0
