@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1680520788329164311}
   - component: {fileID: 4451262446667101922}
   - component: {fileID: 1634258723837532857}
+  - component: {fileID: 859524509}
   m_Layer: 0
   m_Name: COLLIDER_SPINE
   m_TagString: Untagged
@@ -152,12 +153,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 0
-  _toDismember: {fileID: 0}
-  _shootsToDismember: 1
+  _enemyHealth: {fileID: 8308641497441176128}
   _damagePerHit: 30
-  _bloodSplash: {fileID: 4333989742971114359}
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
+--- !u!114 &859524509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308549296256803891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &401961356339383591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +1920,7 @@ MonoBehaviour:
           m_StringArgument: Z_FallingBack
           m_BoolArgument: 0
         m_CallState: 2
-  _enemyHealth: 120
+  maxHealth: 130
 --- !u!1 &4710940672626480558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,6 +2084,8 @@ GameObject:
   - component: {fileID: 6592844268428956311}
   - component: {fileID: 8199456488134107787}
   - component: {fileID: 644941570961339400}
+  - component: {fileID: 1769606237}
+  - component: {fileID: 1769606238}
   m_Layer: 0
   m_Name: COLLIDER_HEAD
   m_TagString: Untagged
@@ -2118,12 +2133,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 1
-  _toDismember: {fileID: 3731116051764432412}
-  _shootsToDismember: 1
-  _damagePerHit: 120
-  _bloodSplash: {fileID: 4333989742971114359}
+  _enemyHealth: {fileID: 8308641497441176128}
+  _damagePerHit: 200
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
+--- !u!114 &1769606237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4812983789445039901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Bullet
+  _isExternal: 1
+  _toDeactivate: {fileID: 3731116051764432412}
+--- !u!114 &1769606238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4812983789445039901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &4942599614153536016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2240,8 @@ GameObject:
   - component: {fileID: 445674774270962520}
   - component: {fileID: 2135214745534004920}
   - component: {fileID: 7825196832324202931}
+  - component: {fileID: 482776453}
+  - component: {fileID: 482776454}
   m_Layer: 0
   m_Name: COLLIDER_LEFT_ARM
   m_TagString: Untagged
@@ -2232,12 +2276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 1
-  _toDismember: {fileID: 2438390136467873505}
-  _shootsToDismember: 1
+  _enemyHealth: {fileID: 8308641497441176128}
   _damagePerHit: 30
-  _bloodSplash: {fileID: 4333989742971114359}
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
 --- !u!65 &7825196832324202931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2251,6 +2293,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &482776453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309842396207419971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Bullet
+  _isExternal: 1
+  _toDeactivate: {fileID: 2438390136467873505}
+--- !u!114 &482776454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309842396207419971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &5537942978994755776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2681,8 @@ GameObject:
   - component: {fileID: 5968263259425236465}
   - component: {fileID: 7188414664986407102}
   - component: {fileID: 3083821858176722392}
+  - component: {fileID: 966075922}
+  - component: {fileID: 966075923}
   m_Layer: 0
   m_Name: COLLIDER_RIGHT_ARM
   m_TagString: Untagged
@@ -2644,12 +2717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 1
-  _toDismember: {fileID: 3972006010725322127}
-  _shootsToDismember: 1
+  _enemyHealth: {fileID: 8308641497441176128}
   _damagePerHit: 30
-  _bloodSplash: {fileID: 4333989742971114359}
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
 --- !u!65 &3083821858176722392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2663,6 +2734,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &966075922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941011484834718258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd807431deed4e4e8b80f8554c9c8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Bullet
+  _isExternal: 1
+  _toDeactivate: {fileID: 3972006010725322127}
+--- !u!114 &966075923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941011484834718258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &7191556997575159601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,6 +2774,7 @@ GameObject:
   - component: {fileID: 8402914942392175509}
   - component: {fileID: 6425874082894887969}
   - component: {fileID: 3219822767693964850}
+  - component: {fileID: 123422940}
   m_Layer: 0
   m_Name: LEG_RIGHT_COLLIDER
   m_TagString: Untagged
@@ -2721,12 +2822,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 0
-  _toDismember: {fileID: 0}
-  _shootsToDismember: 1
+  _enemyHealth: {fileID: 8308641497441176128}
   _damagePerHit: 30
-  _bloodSplash: {fileID: 4333989742971114359}
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
+--- !u!114 &123422940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191556997575159601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &7478079058741212813
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,6 +3459,7 @@ GameObject:
   - component: {fileID: 7345558600846186331}
   - component: {fileID: 6206457045231005438}
   - component: {fileID: 7853688073524610632}
+  - component: {fileID: 1884845598}
   m_Layer: 0
   m_Name: LEG_LEFT_COLLIDER
   m_TagString: Untagged
@@ -3393,12 +3507,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b449162daa2701488f306969bb00156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8308641497441176128}
-  _canDismember: 0
-  _toDismember: {fileID: 0}
-  _shootsToDismember: 1
+  _enemyHealth: {fileID: 8308641497441176128}
   _damagePerHit: 30
-  _bloodSplash: {fileID: 4333989742971114359}
+  _tagForBullet: Bullet
+  _tagToHitAxe: Axe
+--- !u!114 &1884845598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8350842607155682487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb8fd890f3f6d4fa18d33bb351beb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hitTag: Bullet
+  _effectTag: BloodSplash
 --- !u!1 &8433189976705308036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,12 +3756,6 @@ PrefabInstance:
 --- !u!4 &4333989742971114358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5824068525547650895, guid: 63cd3aeef3428074da43b4f9c69bf2f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 7851555093277453369}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4333989742971114359 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5824068525547650894, guid: 63cd3aeef3428074da43b4f9c69bf2f6,
     type: 3}
   m_PrefabInstance: {fileID: 7851555093277453369}
   m_PrefabAsset: {fileID: 0}
