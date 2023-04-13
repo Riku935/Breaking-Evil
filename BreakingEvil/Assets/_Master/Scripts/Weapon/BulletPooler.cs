@@ -6,7 +6,7 @@ public class BulletPooler : MonoBehaviour
 {
     public static BulletPooler instance;
     private List<GameObject> pooledObjects = new List<GameObject>(); //Objetos que voy a reciclar
-    private int amountToPool = 100; //Cantidad de objetos disponibles para reciclar / igualarlo al tamaño del cargador
+    private int amountToPool = 30; //Cantidad de objetos disponibles para reciclar / igualarlo al tamaño del cargador
     [SerializeField] private GameObject BulletPrefab;
 
 
