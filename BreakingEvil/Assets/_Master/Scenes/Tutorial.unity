@@ -4545,6 +4545,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5994136351169272334, guid: 35f9c4fd704a960448ca559afb06c712,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994136351169272334, guid: 35f9c4fd704a960448ca559afb06c712,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994136351169272334, guid: 35f9c4fd704a960448ca559afb06c712,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f9c4fd704a960448ca559afb06c712, type: 3}
 --- !u!1 &939951486
@@ -5331,6 +5346,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1582328305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1085799357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085799358}
+  m_Layer: 0
+  m_Name: FollowPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1085799358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085799357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 298.66495, y: -1.7382102, z: 192.66774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1090946438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405850, guid: 5601521e5fc5f7743993db1ebd891042,
@@ -5745,7 +5791,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 60
+  maxHealth: 120
 --- !u!114 &1195468880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5761,7 +5807,8 @@ MonoBehaviour:
   _enemyHealth: {fileID: 1195468879}
   _damagePerHit: 30
   _tagForBullet: Bullet
-  _tagToHitAxe: Axe
+  _tags:
+  - Axe
 --- !u!1 &1195625396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,10 +7229,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417634488}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.53013146, z: 0.6440323}
+  m_Size: {x: 0.18, y: 0.53013146, z: 0.6440323}
   m_Center: {x: -0.00000093042416, y: 0.8015023, z: 0.3932314}
 --- !u!54 &1417634491
 Rigidbody:
@@ -7211,10 +7258,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417634488}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.8902454, z: 0.25506166}
+  m_Size: {x: 0.2, y: 0.89, z: 0.25506166}
   m_Center: {x: -0.0000000010497805, y: -0.035053518, z: 0.06246918}
 --- !u!1001 &1418854436
 PrefabInstance:

@@ -7,8 +7,8 @@ public class GetHit : MonoBehaviour
     [SerializeField] private Health _enemyHealth;
     [SerializeField] private float _damagePerHit=30;
     [SerializeField] private string _tagForBullet = "Bullet";
-    [SerializeField] private string _tagToHitAxe = "Axe";
-
+  //  [SerializeField] private string _tagToHitAxe = "Axe";
+    [SerializeField] private List<string> _tags = new List<string>();
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(_tagForBullet))
@@ -18,9 +18,12 @@ public class GetHit : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(_tagToHitAxe))
+        foreach (var tag in _tags)
         {
-            _enemyHealth.maxHealth -= _damagePerHit;
+            if (other.CompareTag(tag))
+            {
+                _enemyHealth.maxHealth -= _damagePerHit;
+            }
         }
     }
 
