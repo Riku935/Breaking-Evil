@@ -400,6 +400,7 @@ MonoBehaviour:
   movePosition: {fileID: 901944845}
   speed: 0.1
   coroutineRunning: 1
+  keyName: 
 --- !u!65 &246208928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -575,6 +576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 20
+  canOpen: 0
+  puzzleCount: 0
 --- !u!4 &664317341
 Transform:
   m_ObjectHideFlags: 0
