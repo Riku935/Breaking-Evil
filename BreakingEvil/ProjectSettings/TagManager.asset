@@ -10,6 +10,7 @@ TagManager:
   - interactable
   - BloodSplash
   - Axe
+  - Magazine
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Water
   - UI
   - Grabable
-  - 
-  - 
+  - Grab Interactible
+  - Player
   - 
   - 
   - 
