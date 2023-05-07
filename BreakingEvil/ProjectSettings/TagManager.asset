@@ -11,6 +11,7 @@ TagManager:
   - BloodSplash
   - Axe
   - Magazine
+  - Feed
   layers:
   - Default
   - TransparentFX
