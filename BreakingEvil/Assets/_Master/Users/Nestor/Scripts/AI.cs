@@ -22,14 +22,14 @@ public class AI : MonoBehaviour
 
     void Start()
     {
-       // navMeshAgent.destination = destinations[0].transform.position;
-        player = FindObjectOfType<Player_Controller>().gameObject;
+        //navMeshAgent.destination = destinations[0].transform.position;
+        player = FindObjectOfType<PlayerControllerTarget>().gameObject;
     }
     void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         
-            if (distanceToPlayer <= distanceToFollowPlayer && followPlayer)
+            if (distanceToPlayer <= distanceToFollowPlayer)
             {
                 FollowPlayer();
             }
