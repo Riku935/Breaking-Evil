@@ -34,16 +34,17 @@ public class SimpleShoot : MonoBehaviour
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
 
-        pistolRef.currentAmmo = pistolRef.maxAmmo;
+        
     }
 
     void Update()
     {
-        bulletText.text = pistolRef.currentAmmo.ToString(); 
+        bulletText.text = pistolRef.currentAmmo.ToString();
         //if (Input.GetButtonDown("Fire1"))
         //{
         //    gunAnimator.SetTrigger("Fire");
         //}
+        Reload();
     }
     [ContextMenu("Disparo")]
     public void PullTheTrigger()
@@ -91,7 +92,11 @@ public class SimpleShoot : MonoBehaviour
 
     void Reload()
     {
-        pistolRef.currentAmmo = pistolRef.maxAmmo;
+        if (GunManager.obj.canReload)
+        {
+            pistolRef.currentAmmo = pistolRef.maxAmmo;
+            GunManager.obj.canReload = false;
+        }
     }
 
 }
