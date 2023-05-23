@@ -10572,10 +10572,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 644941570961339400, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644941570961339400, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634258723837532857, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634258723837532857, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135214745534004920, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135214745534004920, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219822767693964850, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219822767693964850, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
+      objectReference: {fileID: 0}
     - target: {fileID: 4493914613880827488, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
       propertyPath: m_Name
       value: Zombie_Alpha
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188414664986407102, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188414664986407102, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853688073524610632, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853688073524610632, guid: 6178191508cdc48439f46177c9649619,
+        type: 3}
+      propertyPath: _tags.Array.data[0]
+      value: Axe
       objectReference: {fileID: 0}
     - target: {fileID: 8308641497441176128, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
