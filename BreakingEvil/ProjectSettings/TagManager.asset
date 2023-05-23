@@ -12,6 +12,7 @@ TagManager:
   - Axe
   - Magazine
   - Feed
+  - ZombieHit
   layers:
   - Default
   - TransparentFX
