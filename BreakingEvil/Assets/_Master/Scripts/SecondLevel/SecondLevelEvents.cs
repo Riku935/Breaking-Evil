@@ -25,23 +25,20 @@ public class SecondLevelEvents : MonoBehaviour
     }
     private void Update()
     {
-        TurnOnLights();
         Obstacle();
     }
-    private void TurnOnLights()
-    {
-        if(isHorde)
-        {
-            reflectors.SetActive(true);
-            doorAnimator.Play("DoorOpen");   
-        }
-    }
+
     private void Obstacle()
     {
         if (inRoom)
         {
             obstacleAnim.Play("ObstacleFall");
         }
+    }
+    public void Horde()
+    {
+        reflectors.SetActive(true);
+        doorAnimator.Play("DoorOpen");
     }
 
     private void OnDestroy()

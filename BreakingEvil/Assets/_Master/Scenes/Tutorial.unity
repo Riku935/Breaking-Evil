@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.053160988, g: 0.009169536, b: 0.0011907506, a: 1}
+  m_IndirectSpecularColor: {r: 0.053155683, g: 0.009169253, b: 0.0011913041, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -690,51 +690,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &56930127
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 56930128}
-  - component: {fileID: 56930129}
-  m_Layer: 0
-  m_Name: LEFT_HAND_COLLIDER
-  m_TagString: ZombieHit
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &56930128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56930127}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0961, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 629061080}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &56930129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56930127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &82405631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,12 +4434,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab34233292d193c47948f094a12fc6c7, type: 3}
---- !u!4 &411356654 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7849909225841866114, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104806599}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &413186897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6524,12 +6473,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e94f0416ca474418749ee6c97439b2, type: 3}
---- !u!4 &629061080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3660009025035086490, guid: 6178191508cdc48439f46177c9649619,
-    type: 3}
-  m_PrefabInstance: {fileID: 1104806599}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &629210637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10494,18 +10437,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1841316143, guid: 6178191508cdc48439f46177c9649619, type: 3}
-      propertyPath: _distanceToAttack
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841316143, guid: 6178191508cdc48439f46177c9649619, type: 3}
-      propertyPath: distanceToFollowPath
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841316143, guid: 6178191508cdc48439f46177c9649619, type: 3}
-      propertyPath: destinations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841316143, guid: 6178191508cdc48439f46177c9649619, type: 3}
       propertyPath: destinations.Array.data[0]
       value: 
       objectReference: {fileID: 855216821}
@@ -10513,10 +10444,6 @@ PrefabInstance:
       propertyPath: destinations.Array.data[1]
       value: 
       objectReference: {fileID: 97573991}
-    - target: {fileID: 1841316144, guid: 6178191508cdc48439f46177c9649619, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
       propertyPath: m_RootOrder
@@ -10572,75 +10499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 644941570961339400, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 644941570961339400, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 1634258723837532857, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1634258723837532857, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135214745534004920, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2135214745534004920, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219822767693964850, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3219822767693964850, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
     - target: {fileID: 4493914613880827488, guid: 6178191508cdc48439f46177c9649619,
         type: 3}
       propertyPath: m_Name
       value: Zombie_Alpha
-      objectReference: {fileID: 0}
-    - target: {fileID: 7188414664986407102, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7188414664986407102, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853688073524610632, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853688073524610632, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: _tags.Array.data[0]
-      value: Axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 8308641497441176128, guid: 6178191508cdc48439f46177c9649619,
-        type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6178191508cdc48439f46177c9649619, type: 3}
@@ -21432,51 +21294,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc89d4ad779dae14eacc18ea2aef32b1, type: 3}
---- !u!1 &1984105281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1984105282}
-  - component: {fileID: 1984105283}
-  m_Layer: 0
-  m_Name: RIGHT_HAND_COLLIDER
-  m_TagString: ZombieHit
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1984105282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984105281}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 411356654}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1984105283
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1984105281}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1987761297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4283425761326543017, guid: 1f4d373a613d0466fbd8849470265852,
