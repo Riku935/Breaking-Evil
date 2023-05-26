@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SecondLevelEvents : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SecondLevelEvents : MonoBehaviour
     public bool inRoom = false;
     public bool isHorde = false;
 
+    public List<GameObject> zombies;
+
     private void Awake()
     {
         obj = this;
@@ -26,6 +29,10 @@ public class SecondLevelEvents : MonoBehaviour
     private void Update()
     {
         Obstacle();
+        if (isHorde)
+        {
+            Horde();
+        }
     }
 
     private void Obstacle()
@@ -39,6 +46,15 @@ public class SecondLevelEvents : MonoBehaviour
     {
         reflectors.SetActive(true);
         doorAnimator.Play("DoorOpen");
+        NavMeshAgent zombieAi;
+        SwarmAlgorithms zombiesscript;
+        foreach (var item in zombies)
+        {
+            //zombiesscript = GetComponent<SwarmAlgorithms>();
+            zombieAi = GetComponent<NavMeshAgent>();
+            zombieAi.enabled = true;
+            //zombiesscript.enabled = true;
+        }
     }
 
     private void OnDestroy()

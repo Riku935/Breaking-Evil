@@ -16,7 +16,7 @@ public class GrabIndicator : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         float distance = Vector3.Distance(player.transform.position, this.transform.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         if ( distance<= _distance)
         {
             _grabFeed.SetActive(true);
