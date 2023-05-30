@@ -10,6 +10,9 @@ TagManager:
   - interactable
   - BloodSplash
   - Axe
+  - Magazine
+  - Feed
+  - ZombieHit
   layers:
   - Default
   - TransparentFX
@@ -18,9 +21,9 @@ TagManager:
   - Water
   - UI
   - Grabable
-  - 
-  - 
-  - 
+  - Grab Interactable
+  - Player
+  - NonInteractive
   - 
   - 
   - 

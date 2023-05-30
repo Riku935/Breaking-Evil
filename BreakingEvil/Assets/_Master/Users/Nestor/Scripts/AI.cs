@@ -9,10 +9,11 @@ public class AI : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Transform[] destinations;
     private int i = 0;
+    
 
     [Header("FollowPlayer----------------------")]
-    
-    public bool followPlayer;
+
+    [SerializeField] private bool followPlayer = false;
     private GameObject player;
     [SerializeField] private float distanceToPlayer;
     [SerializeField] private float distanceToFollowPlayer=3f;
@@ -22,16 +23,17 @@ public class AI : MonoBehaviour
 
     void Start()
     {
-       // navMeshAgent.destination = destinations[0].transform.position;
-        player = FindObjectOfType<Player_Controller>().gameObject;
+        //navMeshAgent.destination = destinations[0].transform.position;
+        player = FindObjectOfType<PlayerControllerTarget>().gameObject;
     }
     void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         
-            if (distanceToPlayer <= distanceToFollowPlayer && followPlayer)
+            if (distanceToPlayer <= distanceToFollowPlayer)
             {
                 FollowPlayer();
+                followPlayer = true;
             }
             else
             {

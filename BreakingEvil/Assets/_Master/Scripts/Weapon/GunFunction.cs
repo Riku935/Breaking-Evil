@@ -23,7 +23,7 @@ public class GunFunction : Object_Interaction
         Reload();
     }
 
-    void Shoot()
+    public void Shoot()
     {
         if ( _gunData.canShoot && _gunData.currentCharger > 0)
         {

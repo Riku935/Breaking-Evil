@@ -86,7 +86,7 @@ public class Player_Controller : MonoBehaviour
 
 
 
-
+		
 
 
 
@@ -106,6 +106,16 @@ public class Player_Controller : MonoBehaviour
 			Interaction();
 		}*/
 	}
+	public void RigthInteraction()
+	{
+		right_Hand.Interaction();
+	}
+
+	public void LeftInteraction()
+	{
+		left_Hand.Interaction();
+	}
+
 
 	private void Interaction()
 	{
