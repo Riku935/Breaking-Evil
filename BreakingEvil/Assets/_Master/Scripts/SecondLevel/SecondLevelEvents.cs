@@ -46,14 +46,23 @@ public class SecondLevelEvents : MonoBehaviour
     {
         reflectors.SetActive(true);
         doorAnimator.Play("DoorOpen");
-        NavMeshAgent zombieAi;
-        SwarmAlgorithms zombiesscript;
-        foreach (var item in zombies)
+        
+        //foreach (var item in zombies)
+        //{
+        //    //zombiesscript = GetComponent<SwarmAlgorithms>();
+        //    zombieAi = GetComponent<NavMeshAgent>();
+        //    zombieAi.enabled = true;
+        //    //zombiesscript.enabled = true;
+        //}
+        foreach(GameObject gameobject in zombies)
         {
-            //zombiesscript = GetComponent<SwarmAlgorithms>();
-            zombieAi = GetComponent<NavMeshAgent>();
-            zombieAi.enabled = true;
-            //zombiesscript.enabled = true;
+            NavMeshAgent zombieAi = gameobject.GetComponent<NavMeshAgent>();
+            SwarmAlgorithms zombiesscript = gameobject.GetComponent<SwarmAlgorithms>();
+            if (zombieAi != null && zombiesscript != null)
+            {
+                zombieAi.enabled = true;
+                zombiesscript.enabled = true;
+            }
         }
     }
 
