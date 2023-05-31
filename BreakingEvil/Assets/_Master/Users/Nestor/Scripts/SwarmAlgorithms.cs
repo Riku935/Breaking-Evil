@@ -8,7 +8,7 @@ public class SwarmAlgorithms : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Transform[] destinations;
     private int i = 0;
-
+    private bool isDeath = false;
     private Animator anim;
 
     [Header("Attack Values")]
@@ -47,33 +47,37 @@ public class SwarmAlgorithms : MonoBehaviour
 
     void Update()
     {
-        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distanceToPlayer <= distanceToFollowPlayer && distanceToPlayer > _distanceToAttack)
+        if (isDeath == false)
         {
-            followPlayer = true;
-            FollowPlayer();
+            distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-            // Si este agente está siguiendo al jugador, establecerlo como líder y hacer que los demás agentes lo sigan
-            if (followPlayer)
+            if (distanceToPlayer <= distanceToFollowPlayer && distanceToPlayer > _distanceToAttack)
             {
-                leader = this;
-                FollowPlayerGroup();
-                distanceToFollowPlayer *= 2; // Duplicar la distancia de seguimiento al jugador
+                followPlayer = true;
+                FollowPlayer();
+
+                // Si este agente está siguiendo al jugador, establecerlo como líder y hacer que los demás agentes lo sigan
+                if (followPlayer)
+                {
+                    leader = this;
+                    FollowPlayerGroup();
+                    distanceToFollowPlayer *= 2; // Duplicar la distancia de seguimiento al jugador
+                }
             }
-        }
-        else if (distanceToPlayer <= _distanceToAttack)
-        {
-            followPlayer = false;
-            navMeshAgent.speed = 0;
-            StartCoroutine(Attack());
-        }
-        else
-        {
-            followPlayer = false;
-            EnemyPath();
-            navMeshAgent.speed = 3;
-            distanceToFollowPlayer /= 2; // Restaurar la distancia de seguimiento al jugador
+            else if (distanceToPlayer <= _distanceToAttack)
+            {
+                followPlayer = false;
+                navMeshAgent.speed = 0;
+                StartCoroutine(Attack());
+            }
+            else
+            {
+                followPlayer = false;
+                EnemyPath();
+                navMeshAgent.speed = 3;
+                distanceToFollowPlayer /= 2; // Restaurar la distancia de seguimiento al jugador
+                ennemyIsDeath();
+            }
         }
     }
 
@@ -130,5 +134,9 @@ public class SwarmAlgorithms : MonoBehaviour
         {
             followPlayer = true;
         }
+    }
+    public void ennemyIsDeath()
+    {
+        isDeath = true;
     }
 }

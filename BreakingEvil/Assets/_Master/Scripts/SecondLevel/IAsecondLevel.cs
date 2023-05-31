@@ -8,6 +8,8 @@ public class IAsecondLevel : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     private Animator anim;
     private GameObject player;
+    private bool isDeath = false;
+
 
     public BoxCollider colliderss;
 
@@ -29,17 +31,19 @@ public class IAsecondLevel : MonoBehaviour
     private void Update()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distanceToPlayer <= distanceToFollowPlayer && distanceToPlayer > _distanceToAttack)
+        if (isDeath == false)
         {
-            FollowPlayer();
-            followPlayer = true;
-        }
-        else if (distanceToPlayer <= _distanceToAttack)
-        {
-            followPlayer = false;
-            navMeshAgent.speed = 0;
-            StartCoroutine(Attack());
+            if (distanceToPlayer <= distanceToFollowPlayer && distanceToPlayer > _distanceToAttack)
+            {
+                FollowPlayer();
+                followPlayer = true;
+            }
+            else if (distanceToPlayer <= _distanceToAttack)
+            {
+                followPlayer = false;
+                navMeshAgent.speed = 0;
+                StartCoroutine(Attack());
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -69,5 +73,9 @@ public class IAsecondLevel : MonoBehaviour
         {
             followPlayer = true;
         }
+    }
+    public void ennemyIsDeath()
+    {
+        isDeath = true;
     }
 }
