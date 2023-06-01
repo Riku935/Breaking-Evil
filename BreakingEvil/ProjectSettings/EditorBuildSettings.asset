@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Master/Scenes/Tutorial.unity
     guid: 59adbd1007194764798322cfc53a35fc
   - enabled: 1
+    path: Assets/_Master/Scenes/ExperimentScene.unity
+    guid: c914a478b9fad794d9f988b7a8de771e
+  - enabled: 1
     path: Assets/_Master/Scenes/VRPlayerScene.unity
     guid: 44c4e65cbe7a37c4380a0f0fffd1654f
   m_configObjects:

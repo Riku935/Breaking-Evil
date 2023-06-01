@@ -9,4 +9,15 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+    public void PlaySecondLevel()
+    {
+        SceneManager.LoadScene("ExperimentScene");
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("ExperimentScene");
+        }
+    }
 }
