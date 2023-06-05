@@ -44,6 +44,7 @@ public class SecondLevelEvents : MonoBehaviour
     }
     public void Horde()
     {
+        Debug.Log("HordeDebug");
         reflectors.SetActive(true);
         doorAnimator.Play("DoorOpen");
         
