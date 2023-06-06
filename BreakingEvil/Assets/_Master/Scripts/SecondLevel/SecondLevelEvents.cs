@@ -7,6 +7,8 @@ public class SecondLevelEvents : MonoBehaviour
 {
     public static SecondLevelEvents obj;
     public GameObject reflectors;
+    public GameObject fatherHorde;
+
     public GameObject door;
     public GameObject obstacle;
 
@@ -46,6 +48,7 @@ public class SecondLevelEvents : MonoBehaviour
     {
         Debug.Log("HordeDebug");
         reflectors.SetActive(true);
+        fatherHorde.SetActive(true);
         doorAnimator.Play("DoorOpen");
         
         //foreach (var item in zombies)

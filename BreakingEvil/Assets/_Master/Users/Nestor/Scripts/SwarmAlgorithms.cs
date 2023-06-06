@@ -75,7 +75,7 @@ public class SwarmAlgorithms : MonoBehaviour
                 followPlayer = false;
                 EnemyPath();
                 navMeshAgent.speed = 3;
-                distanceToFollowPlayer =10; // Restaurar la distancia de seguimiento al jugador
+                distanceToFollowPlayer =20; // Restaurar la distancia de seguimiento al jugador
                // ennemyIsDeath();
             }
         }
@@ -101,7 +101,7 @@ public class SwarmAlgorithms : MonoBehaviour
 
     public void FollowPlayer()
     {
-        navMeshAgent.speed = 8;
+        navMeshAgent.speed = 9;
         navMeshAgent.destination = player.transform.position;
         anim.Play("Z_Run_InPlace");
     }
