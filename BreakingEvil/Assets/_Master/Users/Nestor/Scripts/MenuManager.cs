@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void PlaySecondLevel()
     {
         SceneManager.LoadScene("ExperimentScene");
